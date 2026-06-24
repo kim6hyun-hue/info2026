@@ -8,6 +8,8 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Chart.js for Rendering the exact 2019-2020 Sales Performance Chart -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
@@ -208,7 +210,7 @@
         </div>
       </div>
 
-      <!-- 개념학습 카드 2 (기기별 주요 네트워크 기술 개정) -->
+      <!-- 개념학습 카드 2 -->
       <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
         <div class="bg-emerald-50 px-6 py-4 border-b border-emerald-100 flex justify-between items-center">
           <div class="flex items-center gap-2">
@@ -273,7 +275,7 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <!-- 1단원 문제 1 (정답 정적 강조 스타일 완전 삭제) -->
+          <!-- 1단원 문제 1 (기출 정답 강조 클래스 완벽 제거) -->
           <div class="bg-white rounded-xl p-5 shadow-sm border border-slate-200 space-y-4">
             <div class="flex justify-between items-start">
               <span class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-1 rounded font-bold">네트워크 구성 요소</span>
@@ -311,7 +313,7 @@
             <div class="feedback-box hidden text-xs p-3 rounded font-medium"></div>
           </div>
 
-          <!-- 1단원 신규 문제 3 -->
+          <!-- 1단원 신규 문제 3 (기출 정답 강조 클래스 완벽 제거) -->
           <div class="bg-white rounded-xl p-5 shadow-sm border border-slate-200 space-y-4 md:col-span-2">
             <div class="flex justify-between items-start">
               <span class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-1 rounded font-bold">유·무선 통신 매체 및 기술</span>
@@ -329,7 +331,7 @@
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs">
               <button onclick="selectAnswer(this, 103, true, '정답입니다! 이더넷은 유선 케이블 기반 표준 유선 기술이고(ㄱ), 와이파이는 무선 AP 인프라망을 이용해 인터넷을 지원하는 대표 무선 랜 기술입니다(ㄴ). ㄷ은 NFC에 대한 설명이며, ㄹ은 블루투스에 대한 설명으로 서로 교차하여 오답으로 구성되어 있습니다.')" class="opt-btn w-full text-left p-2.5 rounded border border-slate-200 hover:bg-slate-50 transition">① ㄱ, ㄴ</button>
-              <button onclick="selectAnswer(this, 103, false, 'ㄷ은 블루투스가 아닌 NFC의 동작 원리입니다.')" class="opt-btn w-full text-left p-2.5 rounded border border-slate-200 hover:bg-slate-50 transition">② ㄱ, ㄷ</button>
+              <button onclick="selectAnswer(this, 103, false, 'ㄷ은 블루투스가 아닌 NFC of 동작 원리입니다.')" class="opt-btn w-full text-left p-2.5 rounded border border-slate-200 hover:bg-slate-50 transition">② ㄱ, ㄷ</button>
               <button onclick="selectAnswer(this, 103, false, 'ㄹ은 무선 기기 페어링을 수반하는 블루투스에 적절한 설명입니다.')" class="opt-btn w-full text-left p-2.5 rounded border border-slate-200 hover:bg-slate-50 transition">③ ㄴ, ㄹ</button>
               <button onclick="selectAnswer(this, 103, false, 'ㄷ과 ㄹ 모두 설명 대상 기술이 잘못 짝지어졌습니다.')" class="opt-btn w-full text-left p-2.5 rounded border border-slate-200 hover:bg-slate-50 transition">④ ㄷ, ㄹ</button>
             </div>
@@ -443,7 +445,7 @@
                       <input type="text" data-answer="FLAC" class="blank-input border-b-2 border-slate-300 focus:border-blue-500 bg-slate-50 focus:bg-white text-center font-bold px-1 py-0.5 text-blue-600 rounded transition outline-none" style="width: 70px;" placeholder="blank"> 오디오
                     </span>
                     <p class="text-xs text-slate-500 leading-relaxed">
-                      소리 파형을 표본화하여 부호화하는 전과정에서, 어떤 음향 신호도 임의로 누락시키거나 훼손하지 않고 데이터 기록 구조의 빈도 패턴만 압축하는 대표적 무손실 고음질 전용 기술 압축 방식을 취합니다.
+                      소리 파형을 표본화하여 부호화하는 전과정에서, 어떤 음향 신호도 임의로 누락시키거나 훼손하지 않고 데이터 기록 구조 of 빈도 패턴만 압축하는 대표적 무손실 고음질 전용 기술 압축 방식을 취합니다.
                     </p>
                   </div>
                   <div class="bg-white p-4 rounded-lg border border-stone-100 shadow-xs">
@@ -567,7 +569,7 @@
         </div>
       </div>
 
-      <!-- 개념학습 카드 5 (시간 시각화 예시를 교습용 2015~2019 인터넷 이용률 실제 수치 가시화) -->
+      <!-- 개념학습 카드 5 -->
       <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
         <div class="bg-blue-50 px-6 py-4 border-b border-blue-100 flex justify-between items-center">
           <div class="flex items-center gap-2">
@@ -759,7 +761,7 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <!-- 2단원 문제 1 (정답 강조 스타일을 일반 옵션 단추와 균일화 수정) -->
+          <!-- 2단원 문제 1 (개정 데이터 압축 효과 및 방법) -->
           <div class="bg-white rounded-xl p-5 shadow-sm border border-slate-200 space-y-4">
             <div class="flex justify-between items-start">
               <span class="bg-blue-100 text-blue-800 text-xs px-2.5 py-1 rounded font-bold">디지털 데이터 압축</span>
@@ -874,7 +876,7 @@
         </div>
       </div>
 
-      <!-- 개념학습 카드 2 (선택 정렬 알고리즘) -->
+      <!-- 개념학습 카드 2 (선택 정렬 알고리즘 - 수열 [5, 2, 4, 1, 3] 연동 개정) -->
       <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
         <div class="bg-amber-50 px-6 py-4 border-b border-amber-100 flex justify-between items-center">
           <div class="flex items-center gap-2">
@@ -890,12 +892,13 @@
               <input type="text" data-answer="최솟값" class="blank-input border-b-2 border-slate-300 focus:border-amber-500 bg-slate-50 focus:bg-white text-center font-bold px-1 py-0.5 text-amber-600 rounded transition outline-none" style="width: 70px;" placeholder="blank">(오름차순 기준)을 찾아내어, 아직 정렬되지 않은 영역의 가장 <strong>첫 번째 원소와 자리를 교환</strong>하는 직관적인 정렬 알고리즘입니다.
             </p>
             <div class="bg-stone-50 p-4 rounded-xl border border-stone-200 text-xs space-y-2">
-              <span class="font-bold text-slate-700 block"><i class="fa-solid fa-circle-info"></i> 리스트 [5, 1, 4, 2, 8] 선택 정렬(오름차순) 흐름 추적</span>
+              <span class="font-bold text-slate-700 block"><i class="fa-solid fa-circle-info"></i> 리스트 [5, 2, 4, 1, 3] 선택 정렬(오름차순) 흐름 추적</span>
               <div class="font-mono text-slate-600 space-y-1">
-                <div>- 초기 상태: [5, 1, 4, 2, 8] (미정렬 영역 전체 탐색 후 최솟값 '1' 식별)</div>
-                <div>- 1회전 후 : [<span class="text-amber-600 font-bold">1</span>, 5, 4, 2, 8] (최솟값 '1'과 첫 번째 자리 원소 '5' 교환)</div>
-                <div>- 2회전 후 : [<span class="text-amber-600 font-bold">1, 2</span>, 4, 5, 8] (나머지 중 최솟값 '2'와 미정렬 구역 첫 원소 '5' 교환)</div>
-                <div>- 3회전 후 : [<span class="text-amber-600 font-bold">1, 2, 4</span>, 5, 8] (나머지 중 최솟값 '4' 탐색, 자기 자리이므로 유지)</div>
+                <div>- 초기 상태: [5, 2, 4, 1, 3] (미정렬 영역 전체 탐색 후 최솟값 '1' 식별)</div>
+                <div>- 1회전 후 : [<span class="text-amber-600 font-bold">1</span>, 2, 4, 5, 3] (최솟값 '1'과 첫 번째 자리 원소 '5' 교환)</div>
+                <div>- 2회전 후 : [<span class="text-amber-600 font-bold">1, 2</span>, 4, 5, 3] (나머지 중 최솟값 '2'가 이미 제자리에 있으므로 변동 유지)</div>
+                <div>- 3회전 후 : [<span class="text-amber-600 font-bold">1, 2, 3</span>, 5, 4] (나머지 중 최솟값 '3'을 찾아 세 번째 원소인 '4'와 교환)</div>
+                <div>- 4회전 후 : [<span class="text-amber-600 font-bold">1, 2, 3, 4</span>, 5] (나머지 중 최솟값 '4'를 찾아 네 번째 원소인 '5'와 교환)</div>
               </div>
             </div>
           </div>
@@ -905,7 +908,7 @@
         </div>
       </div>
 
-      <!-- 개념학습 카드 3 (버블 정렬 알고리즘) -->
+      <!-- 개념학습 카드 3 (버블 정렬 알고리즘 - 수열 [5, 2, 4, 1, 3] 연동 개정) -->
       <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
         <div class="bg-amber-50 px-6 py-4 border-b border-amber-100 flex justify-between items-center">
           <div class="flex items-center gap-2">
@@ -921,12 +924,12 @@
               <input type="text" data-answer="이웃한" class="blank-input border-b-2 border-slate-300 focus:border-amber-500 bg-slate-50 focus:bg-white text-center font-bold px-1 py-0.5 text-amber-600 rounded transition outline-none" style="width: 70px;" placeholder="blank"> 두 개의 원소 크기를 비교하여, 지정한 정렬 조건에 맞지 않으면 서로 자리를 변경해 나가면서 정렬하는 원리입니다. 매 회전이 완료될 때마다 미정렬 구역의 가장 <strong>큰 값이 맨 뒤로 고정</strong>됩니다.
             </p>
             <div class="bg-stone-50 p-4 rounded-xl border border-stone-200 text-xs space-y-2">
-              <span class="font-bold text-slate-700 block"><i class="fa-solid fa-circle-info"></i> 리스트 [5, 1, 4, 2, 8] 버블 정렬(오름차순) 흐름 추적</span>
+              <span class="font-bold text-slate-700 block"><i class="fa-solid fa-circle-info"></i> 리스트 [5, 2, 4, 1, 3] 버블 정렬(오름차순) 흐름 추적</span>
               <div class="font-mono text-slate-600 space-y-1">
-                <div>- 초기 상태: [5, 1, 4, 2, 8]</div>
-                <div>- 1회전 과정: (5,1) 비교교환 → [1,5,4,2,8] → (5,4) 비교교환 → [1,4,5,2,8] → (5,2) 비교교환 → [1,4,2,5,8] → (5,8) 유지</div>
-                <div>- 1회전 후 : [1, 4, 2, 5, <span class="text-amber-600 font-bold">8</span>] (가장 큰 원소인 '8'이 정렬 구역 맨 마지막으로 확정)</div>
-                <div>- 2회전 후 : [1, 2, 4, <span class="text-amber-600 font-bold">5, 8</span>] (그다음 큰 원소인 '5'가 해당 자리로 확정)</div>
+                <div>- 초기 상태: [5, 2, 4, 1, 3]</div>
+                <div>- 1회전 과정: (5,2) 비교교환 → [2,5,4,1,3] → (5,4) 비교교환 → [2,4,5,1,3] → (5,1) 비교교환 → [2,4,1,5,3] → (5,3) 비교교환 → [2,4,1,3,5]</div>
+                <div>- 1회전 후 : [2, 4, 1, 3, <span class="text-amber-600 font-bold">5</span>] (가장 큰 원소인 '5'가 정렬 구역 맨 마지막으로 확정)</div>
+                <div>- 2회전 후 : [2, 1, 3, <span class="text-amber-600 font-bold">4, 5</span>] (그다음 큰 원소인 '4'가 해당 자리로 확정)</div>
               </div>
             </div>
           </div>
@@ -936,7 +939,7 @@
         </div>
       </div>
 
-      <!-- 개념학습 카드 4 (삽입 정렬 알고리즘) -->
+      <!-- 개념학습 카드 4 (삽입 정렬 알고리즘 - 수열 [5, 2, 4, 1, 3] 연동 개정) -->
       <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
         <div class="bg-amber-50 px-6 py-4 border-b border-amber-100 flex justify-between items-center">
           <div class="flex items-center gap-2">
@@ -952,12 +955,13 @@
               <input type="text" data-answer="끼워 넣는" class="blank-input border-b-2 border-slate-300 focus:border-emerald-500 bg-slate-50 focus:bg-white text-center font-bold px-1 py-0.5 text-emerald-600 rounded transition outline-none" style="width: 80px;" placeholder="blank"> 정렬 알고리즘입니다.
             </p>
             <div class="bg-stone-50 p-4 rounded-xl border border-stone-200 text-xs space-y-2">
-              <span class="font-bold text-slate-700 block"><i class="fa-solid fa-circle-info"></i> 리스트 [5, 1, 4, 2, 8] 삽입 정렬(오름차순) 흐름 추적 (시험지 수록 스냅샷)</span>
+              <span class="font-bold text-slate-700 block"><i class="fa-solid fa-circle-info"></i> 리스트 [5, 2, 4, 1, 3] 삽입 정렬(오름차순) 흐름 추적 (시험지 수록 스냅샷)</span>
               <div class="font-mono text-slate-600 space-y-1">
-                <div>- 초기 상태: [5, 1, 4, 2, 8] (두 번째 원소 '1'을 가져와 앞의 '5'와 대조하여 맨 앞에 삽입)</div>
-                <div>- 1회전 후 : [<span class="text-amber-600 font-bold">1, 5</span>, 4, 2, 8] (세 번째 원소 '4'를 '1'과 '5' 사이의 올바른 칸에 삽입)</div>
-                <div>- 2회전 후 : [<span class="text-amber-600 font-bold">1, 4, 5</span>, 2, 8] (네 번째 원소 '2'를 '1'과 '4' 사이에 삽입)</div>
-                <div>- 3회전 후 : [<span class="text-amber-600 font-bold">1, 2, 4, 5</span>, 8] (다섯 번째 원소 '8'을 제자리에 삽입 정렬 완료)</div>
+                <div>- 초기 상태: [5, 2, 4, 1, 3] (두 번째 원소 '2'를 가져와 앞의 '5'와 대조하여 앞에 삽입)</div>
+                <div>- 1회전 후 : [<span class="text-amber-600 font-bold">2, 5</span>, 4, 1, 3] (세 번째 원소 '4'를 '2'와 '5' 사이에 삽입)</div>
+                <div>- 2회전 후 : [<span class="text-amber-600 font-bold">2, 4, 5</span>, 1, 3] (네 번째 원소 '1'을 찾아 맨 앞에 삽입)</div>
+                <div>- 3회전 후 : [<span class="text-amber-600 font-bold">1, 2, 4, 5</span>, 3] (다섯 번째 원소 '3'을 '2'와 '4' 사이에 삽입)</div>
+                <div>- 4회전 후 : [<span class="text-amber-600 font-bold">1, 2, 3, 4, 5</span>] (오름차순 정렬 완료)</div>
               </div>
             </div>
           </div>
@@ -979,7 +983,7 @@
         <div class="p-6 space-y-6">
           <div class="text-slate-600 text-sm md:text-base space-y-4 leading-relaxed">
             <p>
-              데이터 더미 속에서 자신이 원하는 특정 값을 정확하게 조치 및 추출해 내는 과정을 <strong>탐색(Search)</strong>이라고 명칭합니다.
+              데이터 더미 속에서 자신이 원하는 특정 값을 정확하게 조치 및 추출해 내는 과정을 <strong>탐색(Search)</strong>오로 명칭합니다.
             </p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
               <div class="bg-stone-50 p-4 rounded-xl border border-stone-200 space-y-2">
@@ -1016,43 +1020,43 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <!-- 3단원 문제 1 (정답 강조 스타일을 일반 단추 스타일과 통일 완료) -->
+          <!-- 3단원 문제 1 (선택 정렬 동작 스냅샷 매핑) -->
           <div class="bg-white rounded-xl p-5 shadow-sm border border-slate-200 space-y-4">
             <div class="flex justify-between items-start">
               <span class="bg-amber-100 text-amber-800 text-xs px-2.5 py-1 rounded font-bold">정렬 스냅샷</span>
               <span class="text-xs text-slate-400 font-semibold">동작 원리 분석</span>
             </div>
             <p class="text-sm font-semibold text-slate-800 leading-relaxed">
-              리스트 <code class="code-font">[5, 1, 4, 2, 8]</code>을 <strong>선택 정렬(오름차순)</strong>로 정렬하는 과정에서 기록된 '2회전 완료 후' 리스트의 스냅샷으로 알맞은 것은?
+              리스트 <code class="code-font">[5, 2, 4, 1, 3]</code>을 <strong>선택 정렬(오름차순)</strong>로 정렬하는 과정에서 기록된 '3회전 완료 후' 리스트의 스냅샷으로 알맞은 것은?
             </p>
             <div class="grid grid-cols-1 gap-2 text-xs">
-              <button onclick="selectAnswer(this, 301, false, '초기 상태에 해당합니다.')" class="opt-btn w-full text-left p-2.5 rounded border border-slate-200 hover:bg-slate-50 transition">① [5, 1, 4, 2, 8]</button>
-              <button onclick="selectAnswer(this, 301, false, '선택 정렬 1회전이 완료된 후의 상태입니다. (최솟값인 1을 찾아 맨 처음 원소인 5와 교환)')" class="opt-btn w-full text-left p-2.5 rounded border border-slate-200 hover:bg-slate-50 transition">② [1, 5, 4, 2, 8]</button>
-              <button onclick="selectAnswer(this, 301, true, '정답입니다! 선택 정렬 1회전 후 [1, 5, 4, 2, 8] 상태에서 정렬 구역 [1]을 제외한 나머지 [5, 4, 2, 8]의 최소값인 \'2\'를 탐색합니다. 그 후 미정렬 맨 첫째 원소인 \'5\'와 자리를 맞교환하기 때문에, 2회전 완료 상태는 [1, 2, 4, 5, 8]로 구현됩니다.')" class="opt-btn w-full text-left p-2.5 rounded border border-slate-200 hover:bg-slate-50 transition">③ [1, 2, 4, 5, 8]</button>
-              <button onclick="selectAnswer(this, 301, false, '삽입 정렬 2회전 결과에 해당하는 상태로서, 선택 정렬의 메커니즘과 일치하지 않습니다.')" class="opt-btn w-full text-left p-2.5 rounded border border-slate-200 hover:bg-slate-50 transition">④ [1, 4, 5, 2, 8]</button>
+              <button onclick="selectAnswer(this, 301, false, '초기 상태에 해당합니다.')" class="opt-btn w-full text-left p-2.5 rounded border border-slate-200 hover:bg-slate-50 transition">① [5, 2, 4, 1, 3]</button>
+              <button onclick="selectAnswer(this, 301, false, '선택 정렬 1회전 완료 후(혹은 2회전 완료 후)의 리스트 상태입니다.')" class="opt-btn w-full text-left p-2.5 rounded border border-slate-200 hover:bg-slate-50 transition">② [1, 2, 4, 5, 3]</button>
+              <button onclick="selectAnswer(this, 301, true, '정답입니다! 선택 정렬 1회전 완료 후 [1, 2, 4, 5, 3]이 되며, 2회전 대상 영역인 [2, 4, 5, 3]에서 최솟값 2가 이미 정렬된 상태이므로 [1, 2, 4, 5, 3]을 유지합니다. 3회전 진행 시 나머지 미정렬 영역 [4, 5, 3] 중 최솟값인 \'3\'을 탐색하여 세 번째 원소인 \'4\'와 맞교환하므로, 최종 3회전 완료 후 리스트는 [1, 2, 3, 5, 4]가 됩니다.')" class="opt-btn w-full text-left p-2.5 rounded border border-slate-200 hover:bg-slate-50 transition">③ [1, 2, 3, 5, 4]</button>
+              <button onclick="selectAnswer(this, 301, false, '4회전 완료 후 최종 정렬이 성립된 결과 리스트입니다.')" class="opt-btn w-full text-left p-2.5 rounded border border-slate-200 hover:bg-slate-50 transition">④ [1, 2, 3, 4, 5]</button>
             </div>
             <div class="feedback-box hidden text-xs p-3 rounded font-medium"></div>
           </div>
 
-          <!-- 3단원 문제 2 (정답 강조 스타일을 일반 옵션 단추와 일치 완료) -->
+          <!-- 3단원 문제 2 -->
           <div class="bg-white rounded-xl p-5 shadow-sm border border-slate-200 space-y-4">
             <div class="flex justify-between items-start">
               <span class="bg-amber-100 text-amber-800 text-xs px-2.5 py-1 rounded font-bold">버블 정렬</span>
               <span class="text-xs text-slate-400 font-semibold">교과서 응용형</span>
             </div>
             <p class="text-sm font-semibold text-slate-800 leading-relaxed">
-              초기 상태 <code class="code-font">[5, 1, 4, 2, 8]</code>를 오름차순으로 <strong>버블 정렬</strong>하고자 할 때, <strong>1회전이 수행되는 도중</strong> 일어나는 인접 원소 간의 '자리 교환(Swap)' 횟수는 총 몇 번인가?
+              초기 상태 <code class="code-font">[5, 2, 4, 1, 3]</code>를 오름차순으로 <strong>버블 정렬</strong>하고자 할 때, <strong>1회전이 수행되는 도중</strong> 일어나는 인접 원소 간의 '자리 교환(Swap)' 횟수는 총 몇 번인가?
             </p>
             <div class="grid grid-cols-1 gap-2 text-xs">
-              <button onclick="selectAnswer(this, 302, false, '교환 횟수를 다시 역산해 보세요.')" class="opt-btn w-full text-left p-2.5 rounded border border-slate-200 hover:bg-slate-50 transition">① 1번</button>
-              <button onclick="selectAnswer(this, 302, false, '이웃한 원소 간의 연속적인 비교 과정을 시뮬레이션해 보시기 바랍니다.')" class="opt-btn w-full text-left p-2.5 rounded border border-slate-200 hover:bg-slate-50 transition">② 2번</button>
-              <button onclick="selectAnswer(this, 302, true, '정답입니다! 1회전 진행 순서는 다음과 같습니다.\n1단계: (5,1) 대조 → 정렬 어긋나므로 교환 [1,5,4,2,8] (1회)\n2단계: (5,4) 대조 → 교환 [1,4,5,2,8] (2회)\n3단계: (5,2) 대조 → 교환 [1,4,2,5,8] (3회)\n4단계: (5,8) 대조 → 정렬 정상이므로 미교환 유지.\n따라서 자리 바꿈은 총 3회 일어납니다.')" class="opt-btn w-full text-left p-2.5 rounded border border-slate-200 hover:bg-slate-50 transition">③ 3번</button>
-              <button onclick="selectAnswer(this, 302, false, '모든 비교쌍에서 다 자리 교환이 수반되지는 않습니다.')" class="opt-btn w-full text-left p-2.5 rounded border border-slate-200 hover:bg-slate-50 transition">④ 4번</button>
+              <button onclick="selectAnswer(this, 302, false, '교환 횟수가 너무 적습니다. 과정을 다시 시뮬레이션해 보세요.')" class="opt-btn w-full text-left p-2.5 rounded border border-slate-200 hover:bg-slate-50 transition">① 2번</button>
+              <button onclick="selectAnswer(this, 302, false, '인접한 요소 간의 대소 대조를 연속적으로 흐름 전개해 보시기 바랍니다.')" class="opt-btn w-full text-left p-2.5 rounded border border-slate-200 hover:bg-slate-50 transition">② 3번</button>
+              <button onclick="selectAnswer(this, 302, true, '정답입니다! 1회전 진행 순서는 다음과 같습니다.\n1단계: (5,2) 비교 → 자리가 맞지 않으므로 교환 [2,5,4,1,3] (1회)\n2단계: (5,4) 비교 → 자리가 맞지 않으므로 교환 [2,4,5,1,3] (2회)\n3단계: (5,1) 비교 → 자리가 맞지 않으므로 교환 [2,4,1,5,3] (3회)\n4단계: (5,3) 비교 → 자리가 맞지 않으므로 교환 [2,4,1,3,5] (4회)\n따라서 총 4회의 자리 교환(Swap)이 완벽하게 동반 처리됩니다.')" class="opt-btn w-full text-left p-2.5 rounded border border-slate-200 hover:bg-slate-50 transition">③ 4번</button>
+              <button onclick="selectAnswer(this, 302, false, '자리 교환 횟수 계산에 오류가 존재합니다. 이 수열의 버블 정렬 1회전 교환 횟수는 4회입니다.')" class="opt-btn w-full text-left p-2.5 rounded border border-slate-200 hover:bg-slate-50 transition">④ 5번</button>
             </div>
             <div class="feedback-box hidden text-xs p-3 rounded font-medium"></div>
           </div>
 
-          <!-- 3단원 문제 3 (정답 강조 스타일인 font-semibold 완전히 제거) -->
+          <!-- 3단원 문제 3 (수정 요구사항 반영: <보기> 제거 후 옳지 않은 설명 고르기 문형으로 전정) -->
           <div class="bg-white rounded-xl p-5 shadow-sm border border-slate-200 space-y-4 md:col-span-2">
             <div class="flex justify-between items-start">
               <span class="bg-amber-100 text-amber-800 text-xs px-2.5 py-1 rounded font-bold">순차 vs 이진 탐색</span>
@@ -1188,7 +1192,7 @@
             </p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
               <!-- 초기 인공지능 -->
-              <div class="bg-stone-50 p-4 rounded-xl border border-stone-200 space-y-2 flex flex-col justify-between shadow-xs">
+              <div class="bg-stone-50 p-4 rounded-xl border border-stone-200 flex flex-col justify-between shadow-xs">
                 <div>
                   <span class="font-bold text-indigo-800 text-sm flex items-center flex-wrap gap-1 mb-2">A. 
                     <input type="text" data-answer="초기 인공지능" class="blank-input border-b-2 border-slate-300 focus:border-indigo-500 bg-slate-50 focus:bg-white text-center font-bold px-1 py-0.5 text-indigo-600 rounded transition outline-none animate-pulse focus:animate-none" style="width: 120px;" placeholder="빈칸 채우기">
@@ -1199,7 +1203,7 @@
                 </div>
               </div>
               <!-- 약인공지능 -->
-              <div class="bg-stone-50 p-4 rounded-xl border border-stone-200 space-y-2 flex flex-col justify-between shadow-xs">
+              <div class="bg-stone-50 p-4 rounded-xl border border-stone-200 flex flex-col justify-between shadow-xs">
                 <div>
                   <span class="font-bold text-indigo-800 text-sm flex items-center flex-wrap gap-1 mb-2">B. 
                     <input type="text" data-answer="약인공지능" class="blank-input border-b-2 border-slate-300 focus:border-indigo-500 bg-slate-50 focus:bg-white text-center font-bold px-1 py-0.5 text-indigo-600 rounded transition outline-none animate-pulse focus:animate-none" style="width: 110px;" placeholder="빈칸 채우기">
@@ -1210,7 +1214,7 @@
                 </div>
               </div>
               <!-- 강인공지능 -->
-              <div class="bg-stone-50 p-4 rounded-xl border border-stone-200 space-y-2 flex flex-col justify-between shadow-xs">
+              <div class="bg-stone-50 p-4 rounded-xl border border-stone-200 flex flex-col justify-between shadow-xs">
                 <div>
                   <span class="font-bold text-indigo-800 text-sm flex items-center flex-wrap gap-1 mb-2">C. 
                     <input type="text" data-answer="강인공지능" class="blank-input border-b-2 border-slate-300 focus:border-indigo-500 bg-slate-50 focus:bg-white text-center font-bold px-1 py-0.5 text-indigo-600 rounded transition outline-none animate-pulse focus:animate-none" style="width: 110px;" placeholder="빈칸 채우기">
@@ -1255,7 +1259,7 @@
               <!-- 비지도학습 -->
               <div class="bg-stone-50 p-4 rounded-xl border border-stone-200 space-y-2">
                 <span class="font-bold text-indigo-800 text-sm flex items-center flex-wrap gap-1">B. 
-                  <input type="text" data-answer="비지도학습" class="blank-input border-b-2 border-slate-300 focus:border-indigo-500 bg-slate-50 focus:bg-white text-center font-bold px-1 py-0.5 text-indigo-600 rounded transition outline-none" style="width: 100px;" placeholder="빈칸 채우기">
+                  <input type="text" data-answer="비지도학습" class="blank-input border-b-2 border-slate-300 focus:border-indigo-500 bg-slate-50 focus:bg-white text-center font-bold px-1 py-0.5 text-indigo-600 rounded transition outline-none" style="width: 100px;" placeholder="text-indigo-600">
                 </span>
                 <p class="text-slate-500 leading-relaxed text-[11px] mt-1">
                   사전에 주어진 정답 레이블 없이 데이터의 고유한 속성과 패턴 특징을 기계가 자력으로 탐구하여 유사한 것들끼리 묶거나 구조적 군집을 찾아내도록 설계하는 학습 유형입니다.
@@ -1388,7 +1392,7 @@
                 <div>
                   <span class="bg-emerald-100 text-emerald-900 rounded px-2 py-0.5 font-bold">2단계</span>
                   <strong class="text-emerald-900 block mt-2 text-sm flex items-center flex-wrap gap-1">데이터 
-                    <input type="text" data-answer="전처리" class="blank-input border-b-2 border-slate-300 focus:border-indigo-500 bg-slate-50 focus:bg-white text-center font-bold px-1 py-0.5 text-indigo-600 rounded transition outline-none" style="width: 70px;" placeholder="blank">
+                    <input type="text" data-answer="전처리" class="blank-input border-b-2 border-slate-300 focus:border-indigo-500 bg-slate-50 focus:bg-white text-center font-bold px-1 py-0.5 text-emerald-600 rounded transition outline-none" style="width: 70px;" placeholder="blank">
                   </strong>
                   <p class="text-slate-500 mt-2 leading-relaxed">
                     수집한 자료 중 누락되었거나 중복되는 값, 신뢰를 저해하는 노이즈 오류를 찾아 보정·폐기하여 학습 모델 학습 시 오류를 최소화하도록 준비하는 정제 단계입니다.
@@ -1465,13 +1469,13 @@
             <div class="grid grid-cols-1 gap-2">
               <button onclick="selectAnswer(this, 402, false, '최초의 챗봇 형태 모델인 ELIZA(엘리자)에 관한 일치 설명입니다.')" class="opt-btn w-full text-left text-xs p-2.5 rounded border border-slate-200 hover:bg-slate-50 transition">① ELIZA는 단순 문법 규칙과 키워드 매핑을 활용한 인류 최초의 대화형 인공지능 프로그램이다.</button>
               <button onclick="selectAnswer(this, 402, false, '현존하는 인공지능들은 번역, 자율주행, 체스 등 지정 분야만 대응하므로 약인공지능이 맞습니다.')" class="opt-btn w-full text-left text-xs p-2.5 rounded border border-slate-200 hover:bg-slate-50 transition">② 특정 한정 범위에서만 인간을 보조하여 작업을 능하게 만드는 시스템을 약인공지능이라 칭한다.</button>
-              <button onclick="selectAnswer(this, 402, true, '정답입니다! 인간처럼 통합적인 상황 이성 추론과 주체적인 \'자의식(Self-awareness)\'을 갖춘 채, 전방위 영역의 지적 문제를 자발적으로 이해하고 수행할 수 있는 수준은 약인공지능이 아닌 \'강인공지능(Strong AI)\'의 필수 조건입니다.')" class="opt-btn w-full text-left text-xs p-2.5 rounded border border-slate-200 hover:bg-slate-50 transition">③ 자의식을 보유하고 자율적 자아 판단에 의해 인간 이상의 광범위한 다차원 문제를 해결할 수 있는 단계는 약인공지능에 해당한다.</button>
-              <button onclick="selectAnswer(this, 402, false, '바둑을 두는 전용 바둑 AI 프로그램 등은 오직 바둑 규칙만 조종 연산하는 대표적인 약인공지능이 맞습니다.')" class="opt-btn w-full text-left text-xs p-2.5 rounded border border-slate-200 hover:bg-slate-50 transition">④ 바둑 전문 프로그램이나 실시간 기사 자동 번역 알고리즘 등은 약인공지능의 범주에 속한다.</button>
+              <button onclick="selectAnswer(this, 402, true, '정답입니다! 인간처럼 통합적인 상황 이성 추론과 주체적인 \'자의식(Self-awareness)\'을 갖춘 채, 전방위 영역의 지적 문제를 자발적으로 이해하고 수행할 수 있는 수준은 약인공지능이 아닌 \'강인공지능(Strong AI)\'의 필수 조건입니다.')" class="opt-btn w-full text-left text-xs p-2.5 rounded border border-slate-200 hover:bg-slate-50 transition">③ 자의식을 보유하고 자율적 자아 판단에 의해 인간 이상의 광범위한 다차원 문제를 해결할 수 있는 단계는 약인공해당한다.</button>
+              <button onclick="selectAnswer(this, 402, false, '바둑을 두는 전용 바둑 AI 프로그램 등 오직 바둑 규칙만 조종 연산하는 대표적인 약인공지능이 맞습니다.')" class="opt-btn w-full text-left text-xs p-2.5 rounded border border-slate-200 hover:bg-slate-50 transition">④ 바둑 전문 프로그램이나 실시간 기사 자동 번역 알고리즘 등은 약인공지능의 범주에 속한다.</button>
             </div>
             <div class="feedback-box hidden text-xs p-3 rounded font-medium"></div>
           </div>
 
-          <!-- 4단원 문제 3 (기계학습 분류와 군집화 및 동작 과정 - 정답 강조 스타일 제거 완료) -->
+          <!-- 4단원 문제 3 (기계학습 분류와 군집화 및 동작 과정 - 정답 강조 및 색상 클래스 완전히 제거) -->
           <div class="bg-white rounded-xl p-5 shadow-sm border border-slate-200 space-y-4 md:col-span-2">
             <div class="flex justify-between items-start">
               <span class="bg-indigo-100 text-indigo-800 text-xs px-2.5 py-1 rounded font-bold">기계학습 유형 및 동작 과정</span>
@@ -1512,6 +1516,7 @@
     window.onload = function() {
       updateProgressBar();
       setupInputListeners();
+      renderCharts();
     }
 
     // 탭 전환 기능
@@ -1657,6 +1662,85 @@
 
       feedbackBox.innerHTML = (isCorrect ? '<i class="fa-solid fa-check-circle"></i> ' : '<i class="fa-solid fa-circle-xmark"></i> ') + feedbackText;
       feedbackBox.classList.remove('hidden');
+    }
+
+    // 차트 렌더링 로직 (연도별 판매 실적 그래프 연동)
+    function renderCharts() {
+      const ctx = document.getElementById('salesChart');
+      if (ctx) {
+        new Chart(ctx.getContext('2d'), {
+          type: 'line',
+          data: {
+            labels: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+            datasets: [
+              {
+                label: '2019년',
+                data: [62, 45, 28, 22, 31, 46, 41, 40, 45, 60, 75, 80],
+                borderColor: '#3b82f6', // Indigo-Blue
+                backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                borderWidth: 3,
+                tension: 0.3,
+                pointBackgroundColor: '#3b82f6',
+                pointRadius: 4,
+                fill: false
+              },
+              {
+                label: '2020년',
+                data: [72, 50, 30, 28, 36, 47, 38, 35, 43, 65, 85, 100],
+                borderColor: '#f97316', // Orange
+                backgroundColor: 'rgba(249, 115, 22, 0.1)',
+                borderWidth: 3,
+                tension: 0.3,
+                pointBackgroundColor: '#f97316',
+                pointRadius: 4,
+                fill: false
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: {
+                position: 'bottom',
+                labels: {
+                  font: {
+                    family: 'Noto Sans KR',
+                    size: 10,
+                    weight: 'bold'
+                  },
+                  boxWidth: 12
+                }
+              }
+            },
+            scales: {
+              y: {
+                beginAtZero: true,
+                max: 120,
+                grid: {
+                  color: '#f1f5f9'
+                },
+                ticks: {
+                  font: {
+                    size: 9
+                  }
+                }
+              },
+              x: {
+                grid: {
+                  display: false
+                },
+                ticks: {
+                  font: {
+                    size: 9,
+                    weight: 'bold'
+                  }
+                }
+              }
+            }
+          }
+        });
+      }
     }
   </script>
 </body>
